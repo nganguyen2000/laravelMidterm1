@@ -23,15 +23,37 @@
         }
         .tour1{
             margin-top: 30px;
+            margin-left: 30px;
+        }
+        .tour1:hover{
+            border:1px solid black;
         }
         .price{
-            color: palevioletred;
+            color: #FF1493;
             font-size: 22px;
             margin-left: 50px;
         }
         .title{
             font-size: 22px;
 
+        }
+        
+        .tour1{
+            position: relative;
+            color: black;
+        }
+        .typetour{
+            position: absolute;
+            bottom: 142px;
+            left: 0px;
+            width: 90px;
+            height: 30px;
+            background-color:#FF1493;
+            color: white;
+        }
+        .anh{
+         
+          
         }
 
   </style>
@@ -60,7 +82,7 @@
          @foreach ($tours as $tour)
              <div class="tour1">
 
-                <img src="{{'/storage/'.$tour->image}}" alt="" height="250px" width="300px">
+                <img class="anh"  src="{{'/storage/'.$tour->image}}" alt="" height="250px" width="350px">
                 <p class="title">{{$tour->name}}</p>
                 <p>Lich trinh: {{$tour->Schedule}}</p>
                 <p>Khoi hanh:{{$tour->depart}}</p>
@@ -68,6 +90,7 @@
                     <p>Danh cho: {{$tour->number}} nguoi</p>
                     <p class="price">{{$tour->price}}đ</p>
                 </div>
+                <div class="typetour">{{$tour->typetour}}</div>
              </div>
          @endforeach
 

@@ -18,3 +18,4 @@ Route::get('/', function () {
 });
 Route::get('/admin/create',"Admin\TourManagementController@create");
 Route::post('/admin/store',"Admin\TourManagementController@store");
+Route::get('home',"booktourController@index");

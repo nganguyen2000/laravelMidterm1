@@ -16,3 +16,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/admin/create',"Admin\TourManagementController@create");
+Route::post('/admin/store',"Admin\TourManagementController@store");
